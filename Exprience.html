@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="inputform.css" rel="stylesheet">
+    <link href="./assets/css/styles.css" rel="stylesheet">
+    <link href="stepper1.css" rel="stylesheet">
+    <title>Professional Details</title>
+</head>
+
+<body>
+    <header style:{position:"fixed"}>
+        <!-- <header class="l-header"> -->
+        <nav class=" nav bd-grid">
+            <div>
+                <a href="#" class="nav__logo"> jhatpat Resume</a>
+            </div>
+
+            <div>
+                <!-- <div class="nav__menu" id="nav-menu"> -->
+                <div class="row">
+                    <div class="col-xs-12 col-md-8 offset-md-2 block border">
+                        <div class="wrapper-progressBar">
+                            <ul class="progressBar">
+                                <li class="active">Personal Information</li>
+                                <li class="active">Education</li>
+                                <li>Professional Information</li>
+                                <li>Select Style</li>
+                                <li>Download</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="l-main">
+
+        <div class="title">
+            <div></div><span class="inputform__title">Professional Information</span><br />
+            <span class="inputform__title-color">List your work experience, from the most recent to the oldest.
+            </span>
+        </div>
+        </div>
+
+        <form id="Professional-details">
+            <label>Work Experience</label>
+            <br />
+            <div class="Work-desc">
+                <input class="input-bar small2" type="text" id="Experience" placeholder="Enter here" required></input>
+                <input class="input-bar mini2" type="month" id="work__start" />
+                <input class="input-bar mini2" type="month" id="work__end" />
+            </div>
+
+            <textarea rows="5" cols="60" name="description" class="desc" type="text"
+                placeholder="Describe your work experience" id="Experience-desc"></textarea>
+            <br />
+
+            <label>Project</label>
+            <br />
+            <div class="project-desc">
+            <!-- <div class="project-desc row"> -->
+                <input class="input-bar small2" type="text" id="project-title" placeholder="Project-title"
+                    required></input>
+                <!-- <div class="row">
+                    <span>
+                        <div>
+                            <label>Starting date</label>
+                        </div>
+                        <div> -->
+                            <input class="input-bar mini2" type="month" id="project__start" />
+                        <!-- </div>
+                    </span>
+                    <span>
+                        <div>
+                            <label>Ending date</label>
+                        </div>
+                        <div> -->
+                            <input class="input-bar mini2" type="month" id="project__end" />
+                        <!-- </div>
+                    </span>
+                </div> -->
+
+
+            </div>
+
+            <textarea rows="5" cols="60" name="description" class="desc" type="text" id="project-desc"
+                placeholder="Describe your project" required></textarea>
+            <br />
+
+            <label>Skills</label>
+            <br />
+            <input class="input-bar" type="text" id="skill1" placeholder="primary skills seperated by comma"
+                required></input>
+            <br />
+            <input class="input-bar" type="text" id="skill2" placeholder="secondary skills seperated by comma"
+                required></input>
+            <br />
+
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </main>
+    <script type="text/JavaScript">
+        var form = document.getElementById('Professional-details')
+
+        form.addEventListener('submit',(event)=>{
+            console.log('ankur')
+            event.preventDefault()
+            var Experience = document.getElementById('Experience').value;
+            var work_start = document.getElementById('work__start').value;
+            var work_end = document.getElementById('work__end').value;
+            var Experience_desc = document.getElementById('Experience-desc').value;
+
+
+            var project_title = document.getElementById('project-title').value;
+            var project_start = document.getElementById('project__start').value;
+            var project_end = document.getElementById('project__end').value;
+            var project_desc = document.getElementById('project-desc').value;
+
+
+            var skill1 = document.getElementById('skill1').value;
+            var skill2 = document.getElementById('skill2').value;
+
+
+            localStorage.setItem("Experience", JSON.stringify({
+                exp: Experience,
+                start: work_start,
+                end: work_end,
+                description: Experience_desc
+
+            }));
+            localStorage.setItem("Project",JSON.stringify({
+                project: project_title,
+                start: project_start,
+                end: project_end,
+                description: project_desc
+
+            }));
+            
+            localStorage.setItem("skill1", skill1);
+            localStorage.setItem("skill2", skill2);
+           
+            location.href="./selectstyle.html";
+       })
+        
+    </script>
+    <script>
+
+        // function addNewWEfield() {
+
+        //     let newNode = document.createElement('textarea')
+        //     newNode.classList.add('form-control')
+        //     newNode.classList.add('weField')
+
+        //     let pdOb = document.getElementById("pd")
+        //     let weAddButtonOb = document.getElementById("weAddButton")
+
+        //     pdOb.insertBefore(newNode, weAddButtonOb);
+        // }
+    </script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--===== MAIN JS =====-->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

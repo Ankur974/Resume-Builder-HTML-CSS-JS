@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./resume3.css" rel="stylesheet">
+    <link href="./stepper1.css" rel="stylesheet">
+    <link href="./assets/css/styles.css" rel="stylesheet">
+
+    <!-- =====BOX ICONS===== -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+    <title>Preview and Download</title>
+</head>
+
+<body>
+    <header>
+        <!-- <header class="l-header"> -->
+        <nav class="nav bd-grid">
+            <div>
+                <a href="#" class="nav__logo"> jhatpat Resume</a>
+            </div>
+
+            <div>
+                <!-- <div class="nav__menu" id="nav-menu"> -->
+                <div class="row">
+                    <div class="col-xs-12 col-md-8 offset-md-2 block border">
+                        <div class="wrapper-progressBar">
+                            <ul class="progressBar">
+                                <li class="active">Personal Information</li>
+                                <li class="active">Education</li>
+                                <li class="active">Professional Information</li>
+                                <li class="active">Select Style</li>
+                                <li>Download</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div id="resume" class="resume">
+        <div class="row">
+            <div class="column">
+                <h2 id="user_name">Arun Soni</h2>
+                <p id="DOB">15-10-1997</p>
+                <p id="role">Web Devloper</p>
+            </div>
+            <div class="column2">
+                <p id="city">Kolkata</p>
+                <p id="phone">9804040515</p>
+                <p id="mail">arun@gmail.com</p>
+            </div>
+        </div>
+        <div class="Title">
+
+            <h3 class="Title2">Experience</h3>
+            <p class="Paragraph"> 
+                <span class="Experience">Jhatpat Resume</span>
+                <span><span id="Exp-start">May,2020</span>-<span id="Exp-end">May,2020</span></span>
+            </p>
+
+            <ul class="list">
+                <li id="Experience-desc"><br>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </li>
+            </ul>
+        </div>
+        <div class="Title">
+            <h2 class="Title2">Project</h2>
+            <p id="project-title" class="Paragraph">Online Resume Builder<span class="date2"><span
+                        id="project-start">May,2020</span>-<span id="project-end">May,2021</span></span></p>
+            <ul class="list">
+                <li id="project-desc"><br>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </li>
+            </ul>
+
+        </div>
+        <div class="Title">
+            <h2 class="Title2">Education</h2>
+            <!-- <p id="Education"class="Paragraph">University of Pittsburgh</p> -->
+            <ul id="Education-list" class="list">
+                <h2 class="Title3">Secondary School</h2>
+                <li id="Education1">
+                    <span id="Edu1-name">Hazinagar Adarsha Hindi Vidyalaya</span>  |  
+                    <span class="parcentage">72%</span>  |  
+                    <span class="date2">2013</span>
+                </li>
+                <h2 class="Title3">Higher School</h2>
+                <li id="Education2">
+                    <span id="Edu2-name">Hazinagar Adarsha Hindi Vidyalaya</span>  |  
+                    <span class="parcentage">59%</span>  |  
+                    <span class="date2">2015</span>
+                </li>
+                <h2 class="Title3">Bacherol's </h2>
+                <li id="Education3">
+                    <span>Chandannagar Institute of Management and Technology</span>  |  
+                    <span class="parcentage">60%</span>  |  
+                    <span class="date2">2020</span>
+                </li>
+
+            </ul>
+
+        </div>
+        <div class="Title">
+            <h2 class="Title2">Skills</h2>
+            <ul id="Skill-list" class="list">
+                <li>
+                    Advanced:<span id="skill1">C,C++,Java</span>
+                </li>
+                <li>
+                    Familiar:<span id='skill2'>Javascript,SQL,HTML/CSS</span>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+    <!-- <button class="fixed-action-btn" onclick="generatePDF()">
+        <a class="btn-floating btn-large red">
+            <i class='bx bxs-download'></i>
+        </a>
+    </button> -->
+    <button class="button" onclick="generatePDF()">Download</button>
+
+    <!-- <script src='./resume1.js'></script> -->
+    <script src="./htmlToPdf.js"></script>
+</body>
+
+
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="inputform.css" rel="stylesheet">
+    <link href="./assets/css/styles.css" rel="stylesheet">
+    <link href="stepper1.css" rel="stylesheet">
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <title>Educational Details</title>
+</head>
+
+<body>
+    <header style:{position:"fixed"}>
+        <!-- <header class="l-header"> -->
+        <nav class=" nav bd-grid">
+            <div>
+                <a href="#" class="nav__logo">jhatpat Resume</a>
+            </div>
+
+            <div>
+                <!-- <div class="nav__menu" id="nav-menu"> -->
+                <div class="row">
+                    <div class="col-xs-12 col-md-8 offset-md-2 block border">
+                        <div class="wrapper-progressBar">
+                            <ul class="progressBar">
+                                <li class='active'>Personal Information</li>
+                                <li>Education</li>
+                                <li>Professional Information</li>
+                                <li>Select Style</li>
+                                <li>Download</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="l-main">
+
+        <div class="title">
+            <div><span class="inputform__title">EDUCATION</span><br />
+                <span class="inputform__title-color">Add information about your educational background.</span>
+            </div>
+        </div>
+
+        <form id="personal-details-form" name="pdf">
+
+            <div>
+                <label>Education : </label>
+                <br />
+                <select class="input-bar mini" name="education" id="Edu1-select">
+                    <option value="volvo1">select option</option>
+                    <option value="volvo">10th</option>
+                    <option value="saab">12th</option>
+                    <option value="opel">UG</option>
+                </select>
+                <span>
+                    <input class="input-bar small " type="text" id="Edu1-name" placeholder="Name of Institution">
+                    <input class="input-bar mini" type="text" id="Edu1-percentage" placeholder="percentage">
+                </span>
+                <br />
+
+                <select class="input-bar mini" name="education" id="Edu2-select">
+                    <option value="volvo1">select option</option>
+                    <option value="volvo">10th</option>
+                    <option value="saab">12th</option>
+                    <option value="opel">UG</option>
+                </select>
+                <span>
+                    <input class="input-bar small" type="text" id="Edu2-name" placeholder="Name of Institution">
+                    <input class="input-bar mini" type="text" id="Edu2-percentage" placeholder="percentage">
+                </span>
+                <br />
+                <select class="input-bar mini" name="education" id="Edu3-select">
+                    <option value="volvo1">select option</option>
+                    <option value="volvo">10th</option>
+                    <option value="saab">12th</option>
+                    <option value="opel">UG</option>
+                </select>
+                <span>
+                    <input class="input-bar small" type="text" id="Edu3-name" placeholder="Name of Institution">
+                    <input class="input-bar mini" type="text" id="Edu3-percentage" placeholder="percentage">
+                </span>
+            </div>
+
+            <button type="submit" class="btn">NEXT</button>
+        </form>
+    </main>
+
+    <script type="text/JavaScript">
+
+        var form = document.getElementById('personal-details-form')
+
+        form.addEventListener('submit',(event)=>{
+            event.preventDefault()
+    
+            var Education1_select = document.getElementById('Edu1-select').value;
+            var Education1_name = document.getElementById('Edu1-name').value;
+            var Education1_percentage = document.getElementById('Edu1-percentage').value;
+
+            var Education2_select = document.getElementById('Edu2-select').value;
+            var Education2_name = document.getElementById('Edu2-name').value;
+            var Education2_percentage = document.getElementById('Edu2-percentage').value;
+
+            var Education3_select = document.getElementById('Edu3-select').value;
+            var Education3_name = document.getElementById('Edu3-name').value;
+            var Education3_percentage = document.getElementById('Edu3-percentage').value;
+
+            localStorage.setItem("Education1",JSON.stringify({
+                select: Education1_select,
+                name: Education1_name,
+                percentage: Education1_percentage
+
+            }));
+            localStorage.setItem("Education2", JSON.stringify({
+                select: Education2_select,
+                name: Education2_name,
+                percentage: Education2_percentage
+
+            }));
+            localStorage.setItem("Education3", JSON.stringify({
+                select: Education3_select,
+                name: Education3_name,
+                percentage: Education3_percentage
+
+            }));
+
+            location.href="./Exprience.html";
+        })
+        
+        
+</script>
+    <!--===== SCROLL REVEAL =====-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--===== MAIN JS =====-->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
