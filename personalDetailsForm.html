@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="inputform.css" rel="stylesheet">
+    <link href="./assets/css/styles.css" rel="stylesheet">
+    <link href="stepper1.css" rel="stylesheet">
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <title>Fill your personal details</title>
+</head>
+
+<body>
+    <header style:{position:"fixed"}>
+        <!-- <header class="l-header"> -->
+        <nav class=" nav bd-grid">
+            <div>
+                <a href="#" class="nav__logo">jhatpat Resume</a>
+            </div>
+
+            <div>
+                <!-- <div class="nav__menu" id="nav-menu"> -->
+                <div class="row">
+                    <div class="col-xs-12 col-md-8 offset-md-2 block border">
+                        <div class="wrapper-progressBar">
+                            <ul class="progressBar">
+                                <li>Personal Information</li>
+                                <li>Education</li>
+                                <li>Professional Information</li>
+                                <li>Select Style</li>
+                                <li>Download</li> 
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="l-main">
+
+        <div class="title">
+            <div><span class="inputform__title" >What’s the best way for employers to contact you ?</span><br />
+                <span class="inputform__title-color"> We suggest including an email and phone number.</span>
+            </div>
+        </div>
+
+        <form id="personal-details-form" name="pdf">
+            <div>
+                <label>Name : </label>
+                <br />
+                <input class="input-bar" type="text" id="name" placeholder="Write your Name"></input>
+                <br />
+                <label>Date of birth:</label>
+                <br />
+                <input class="input-bar" type="date" id="DOB" placeholder="Date of birth"></input>
+                <br />
+                <label>Role : </label>
+                <br />
+                <input class="input-bar" type="text" id="role" placeholder="Write your position"></input>
+                <br />
+                <label>Phone Number : </label>
+                <br />
+                <input class="input-bar" type="number" id="phn_num" placeholder="Phone number"></input>
+                <br />
+                <label>Email : </label>
+                <br />
+                <input class="input-bar" type="email" id="mail" placeholder="Example@gmail.com"></input>
+                <br />
+                <label>City and State : </label>
+                <br />
+                <input class="input-bar" type="text" id="city" placeholder="Current location"></input>
+                <br />
+            </div>
+            
+            <button type="submit" class="btn">NEXT</button>
+        </form>
+    </main>
+
+    <script type="text/JavaScript">
+        function validatename(){
+                
+            var ptrn = /^([^0-9]*)$/;
+            if (ptrn.test(document.getElementById('name').value)){
+                document.getElementById("name").style.borderColor = 'green';
+                var name = document.getElementById('name').value;
+            } else{
+                document.getElementById("name").style.borderColor = 'red';
+                alert('Name is not number');
+            }
+        }   
+
+        document.getElementById("name").addEventListener('keyup',validatename)
+
+            function validatephonenumber(){
+                console.log("phone number")
+            var ptrn = /^(?:(?:\+|0{0,2})91(\s*|[\-])?|[0]?)?([6789]\d{2}([ -]?)\d{3}([ -]?)\d{4})$/;
+            if (ptrn.test(document.getElementById('phn_num').value)){
+                document.getElementById("phn_num").style.borderColor = 'green';
+            } else{
+                document.getElementById("phn_num").style.borderColor = 'red';
+            }
+        }
+        document.getElementById("phn_num").addEventListener('keyup',validatephonenumber)
+
+        var form = document.getElementById('personal-details-form')
+
+        form.addEventListener('submit',(event)=>{
+            event.preventDefault()
+    
+            var dob = document.getElementById('DOB').value;
+            var phone = document.getElementById('phn_num').value;
+            var mail = document.getElementById('mail').value;
+            var role = document.getElementById('role').value;
+            var city = document.getElementById('city').value;
+
+            localStorage.setItem("name", name);
+            localStorage.setItem("DOB",dob);
+            localStorage.setItem("phone", phone);
+            localStorage.setItem("mail", mail);
+            localStorage.setItem("role", role);
+            localStorage.setItem("city", city);
+
+            location.href="./Education.html";
+        })
+        
+        
+</script>
+    <!--===== SCROLL REVEAL =====-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--===== MAIN JS =====-->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

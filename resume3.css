@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+  }
+
+.Title{
+    margin: 0px;
+}
+.Title2{
+    margin: 0%;
+    color: crimson;
+}
+.Paragraph{
+    font-family: 'Times New Roman', Times, serif;
+    font-style: bold;
+    font-size: 19px
+
+}
+.resume{
+    width: 50%;
+    margin:10vw auto;
+    border: black solid 1px;
+    padding: 15px;
+}
+
+  
+  /* Create two equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 50%;
+    padding: 16px;
+    height: 142px; /* Should be removed. Only for demonstration */
+  }
+  
+  /* Clear floats after the columns */
+  .row {
+    display: flex;
+    justify-content: space-between;
+  }
+  .column2{
+      margin: 20px;
+  }
+
+/* floating action btn */
+
+  .fixed-action-btn {
+    position: fixed;
+    right: 23px;
+    bottom: 23px;
+    /* padding-top: 15px; */
+    margin-bottom: 0;
+    z-index: 997;
+    color: white;
+    background-color: red;
+    border-radius: 40px;
+    height: 80px;
+    width: 80px;
+    font-size: 50px;
+    text-align: center;
+  }
+  .bx bxs-download{
+    margin-top: 20px;
+  }
+
+  .Title3{
+    font-size: 92%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  /* .date2{
+    float:right;
+    padding-right: 0px;
+    margin-top: -3px;
+  }
+  .parcentage{
+    margin-left: 143px;
+  } */
+  .button{
+    background-color: #4e524e; /* Green */
+        border: none;
+        color: rgb(236, 220, 220);
+        padding: 10px 35px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 26px;
+        margin-left: 12px;
+        border-radius: 27px;
+        size: 14px;
+        margin-left: 45%;
+  }

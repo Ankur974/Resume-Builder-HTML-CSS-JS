@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="inputform.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form id="personal-details-form">
+        <label>Name : </label>
+        <br />
+        <input class="input-bar" type="text" id="name"></input>
+        <br />
+        <label>Role : </label>
+        <br />
+        <input class="input-bar" type="text" id="role"></input>
+        <br />
+        <label>Phone Number : </label>
+        <br />
+        <input class="input-bar" type="number" id="phn_num"></input>
+        <br />
+        <label>Email : </label>
+        <br />
+        <input class="input-bar" type="email" id="mail"></input>
+        <br />
+        <label>City and State : </label>
+        <br />
+        <input class="input-bar" type="text" id="city"></input>
+        <br />
+        <button type="button" class="btn">Submit</button>
+
+    </form>
+    <form id="Professional-details">
+        <label>Exprience : </label>
+        <br />
+        <label>Date of birth:</label>
+        <br />
+        <input class="input-bar" type="date" id="DOB" placeholder="Date of birth"></input>
+        <br />
+        <input class="input-bar" type="text" id="Exprience1"></input>
+        <br />
+        <input class="input-bar" type="text" id="Exprience2"></input>
+        <br />
+        <input class="input-bar" type="text" id="Exprience3"></input>
+        <br />
+        <button type="button" class="btn">Submit</button>
+
+    </form>
+    <form id="Professional-details">
+        <label>Project : </label>
+        <br />
+        <input class="input-bar" type="text" id="Project1"></input>
+        <br />
+        <input class="input-bar" type="text" id="Project2"></input>
+        <br />
+        <input class="input-bar" type="text" id="Project3"></input>
+        <br />
+        <button type="button" class="btn">Submit</button>
+
+    </form>
+    <form id="Professional-details">
+        <br />
+        <label>Education : </label>
+        <br />
+        <input class="input-bar" type="text" id="Education1"></input>
+        <br />
+        <input class="input-bar" type="text" id="Education2"></input>
+        <br />
+        <button type="button" class="btn">Submit</button>
+    </form>
+    <form id="Professional-details">
+        <br />
+        <label>Skills : </label>
+        <br />
+        <input class="input-bar" type="text" id="Skills1"></input>
+        <br />
+        <input class="input-bar" type="text" id="Skills2"></input>
+        <br />
+        <button type="Submit" class="btn">Submit</button>
+    </form>
+
+
+    <!-- <form>
+        <h1>Technical skills</h1>
+        <label for="cars">Technical skills:</label>
+        <select name="Technical skills" id="skills">
+            <option value="volvo">C</option>
+            <option value="saab">JAVA</option>
+            <option value="opel">PYTHON</option>
+            <option value="audi">C++</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form> -->
+
+    <script type="text/JavaScript">
+        var form = document.getElementById('personal-details-form')
+
+        form.addEventListener('Submit',(event)=>{
+            event.preventDefault()
+            console.log('ankur');
+            var name = document.getElementById('name').value;
+            var phone = document.getElementById('phn_num').value;
+            var mail = document.getElementById('mail').value;
+            var role = document.getElementById('role').value;
+            var city = document.getElementById('city').value;
+
+            console.log(name,phone,mail,city,role);
+
+            localStorage.setItem("name", name);
+            localStorage.setItem("phone", phone);
+            localStorage.setItem("mail", mail);
+            localStorage.setItem("role", role);
+            localStorage.setItem("city", city);
+
+
+           
+
+// Retrieve
+// document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+        })
+        
+</script>
+</body>
+
+</html>
